@@ -1,0 +1,51 @@
+[
+    {
+        "codigo":"1",
+        "titlo":"Laptop Lenovo Gamer Ryzen 5",
+        "imagen":"https://i.ibb.co/1zRpyQy/lap-1.jpg",
+        "precio":"50",
+        "marca":"Lenovo"
+    },
+    {
+        "codigo":"2",
+        "titlo":"Impresora Monocromatica Epson",
+        "imagen":"https://i.ibb.co/xj0V7k4/imp-1.png",
+        "precio":"100",
+        "marca":"Epson"
+    },
+    {
+        "codigo":"3",
+        "titlo":"Teclado Gamer Wesdar",
+        "imagen":"https://i.ibb.co/tpCN2Fw/te-1-1.jpg",
+        "precio":"80",
+        "marca":"Wesdar"
+    },
+    {
+        "codigo":"4",
+        "titlo":"Proyector Epson",
+        "imagen":"https://i.ibb.co/J37Kp44/pro-1.jpg",
+        "precio":"400",
+        "marca":"Epson"
+    },
+    {
+        "codigo":"5",
+        "titlo":"Tarjeta De Video Msi Gtx",
+        "imagen":"https://i.ibb.co/cvPXQf9/ta-1.jpg",
+        "precio":"600",
+        "marca":"Msi"
+    },
+    {
+        "codigo":"6",
+        "titlo":"Mouse Logitech",
+        "imagen":"https://i.ibb.co/BNPNqZr/logitech-1.jpg",
+        "precio":"25",
+        "marca":"Logitech"
+    },
+    {
+        "codigo":"7",
+        "titlo":"Audífonos Gamers MSI HE DS502 Usb 7.1 Surround",
+        "imagen":"https://i.ibb.co/nnq9DvJ/DS502.png",
+        "precio":"59",
+        "marca":"Msi"
+    }
+]

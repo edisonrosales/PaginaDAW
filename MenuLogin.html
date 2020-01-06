@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Serenity - Modern bootstrap website template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- styles -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700" rel="stylesheet">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet">
+  <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="assets/css/flexslider.css" rel="stylesheet">
+  <link href="assets/css/sequence.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/color/default.css" rel="stylesheet">
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <!-- =======================================================
+    Theme Name: Serenity
+    Theme URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <header>
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- logo -->
+          <a class="brand logo" href="index.html">
+			<img src="assets/img/logo.png" alt="" />
+			</a>
+          <!-- end logo -->
+          <!-- top menu -->
+          <div class="navigation">
+            <nav>
+              <ul class="nav topnav">
+                <li class="dropdown">
+                  <a href="index.html">Inicio</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#">Features</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="scaffolding.html">Scaffolding</a></li>
+                    <li><a href="base-css.html">Base CSS</a></li>
+                    <li><a href="components.html">Components</a></li>
+                    <li><a href="javascript.html">Javascripts</a></li>
+                    <li><a href="icons.html">More icons</a></li>
+                    <li class="dropdown"><a href="#">3rd level</a>
+                      <ul class="dropdown-menu sub-menu">
+                        <li><a href="#">Example menu</a></li>
+                        <li><a href="#">Example menu</a></li>
+                        <li><a href="#">Example menu</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown active">
+                  <a href="producto.html">Productos</a>
+                </li>
+                
+                
+                <li class="dropdown">
+                  <a href="Noticias.html">Noticias</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a href="#">¿Quienes somos?</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="about.html">About us</a></li>
+                    
+                    <li><a href="fullwidth.html">Equipo</a></li>
+                    
+                  </ul>
+                </li>
+                <li>
+                  <a href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- end menu -->
+        </div>
+      </div>
+    </div>
+  </header>
+  	<section id="contact-form-section" class="form-content-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="tab-content">
+					<div class="col-sm-12">
+						<div class="item-wrap">
+							<div class="row">
+								
+								<div class="col-sm-12">
+									<div class="item-content colBottomMargin">
+										<div class="item-info">
+											<h2 class="item-title text-center">Formulario contacto desarrollado con Bootstrap 4 y PHP</h2>
+											
+										</div><!--End item-info -->
+										
+								   </div><!--End item-content -->
+								</div><!--End col -->
+								<div class="col-md-12">
+								
+								
+								<form id="contactForm" name="contactform" data-toggle="validator" class="popup-form">
+												<div class="row">
+													<div id="msgContactSubmit" class="hidden"></div>
+													
+													<div class="form-group col-sm-6">
+														<div class="help-block with-errors"></div>
+														<input name="fname" id="fname" placeholder="Tu nombre*" class="form-control" type="text" required data-error="Por favor ingresa tu nombre"> 
+														<div class="input-group-icon"><i class="fa fa-user"></i></div>
+													</div><!-- end form-group -->
+													<div class="form-group col-sm-6">
+														<div class="help-block with-errors"></div>
+														<input name="email" id="email" placeholder="Tu E-mail*" pattern=".*@\w{2,}\.\w{2,}" class="form-control" type="email" required data-error="Por favor ingresa un correo electrónico válido">
+														<div class="input-group-icon"><i class="fa fa-envelope"></i></div>
+													</div><!-- end form-group -->
+													<div class="form-group col-sm-6">
+														<div class="help-block with-errors"></div>
+														<input name="phone" id="phone" placeholder="Teléfono*" class="form-control" type="text" required data-error="Por favor ingresa tu número de teléfono">
+														<div class="input-group-icon"><i class="fa fa-phone"></i></div> 
+													</div><!-- end form-group -->
+													<div class="form-group col-sm-6">
+														<div class="help-block with-errors"></div>
+														<input name="subject" id="subject" placeholder="Asunto*" class="form-control" type="text" required data-error="Por favor ingresa el asunto">
+														<div class="input-group-icon"><i class="fa fa-book"></i></div> 
+													</div><!-- end form-group -->
+													<div class="form-group col-sm-12">
+														<div class="help-block with-errors"></div>
+														<textarea rows="3" name="message" id="message" placeholder="Escribe tu comentario aquí*" class="form-control" required data-error="Por favor ingresa un mensaje"></textarea>
+														<div class="textarea input-group-icon"><i class="fa fa-pencil"></i></div>
+													</div><!-- end form-group -->
+													
+													<div class="form-group last col-sm-12">
+														<button type="submit" id="submit" class="btn btn-custom"><i class='fa fa-envelope'></i> Enviar</button>
+													</div><!-- end form-group -->	
+											
+													<span class="sub-text">* Campos requeridos</span>
+													<div class="clearfix"></div>
+												</div><!-- end row -->
+											</form><!-- end form -->
+											
+											
+									
+									
+								  
+								
+								</div>
+							</div><!--End row -->
+							
+						
+								
+							
+							<!-- Popup end -->
+							
+						</div><!-- end item-wrap -->
+					</div><!--End col -->
+				</div><!--End tab-content -->
+			</div><!--End row -->
+		</div><!--End container -->
+	</section>
+    <!-- JavaScript Library Files -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.easing.js"></script>
+  <script src="assets/js/google-code-prettify/prettify.js"></script>
+  <script src="assets/js/modernizr.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery.elastislide.js"></script>
+  <script src="assets/js/sequence/sequence.jquery-min.js"></script>
+  <script src="assets/js/sequence/setting.js"></script>
+  <script src="assets/js/jquery.prettyPhoto.js"></script>
+  <script src="assets/js/application.js"></script>
+  <script src="assets/js/jquery.flexslider.js"></script>
+  <script src="assets/js/hover/jquery-hover-effect.js"></script>
+  <script src="assets/js/hover/setting.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
