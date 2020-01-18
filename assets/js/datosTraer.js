@@ -6,7 +6,7 @@ function traerDatos(){
 	console.log('dentrode la funcion');
 
 	const xhttp= new XMLHttpRequest();
-	xhttp.open('GET','../../product.json',true);
+	xhttp.open('GET','../../templateHTML/product.json',true);
 	xhttp.send();
 	xhttp.onreadystatechange=function(){
 		if(this.readyState==4 && this.status==200){

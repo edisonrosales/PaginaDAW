@@ -3,25 +3,29 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Producto-SysCompsa S.A</title>
+  <title>Detalle-SysCompsa S.A</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- styles -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700" rel="stylesheet">
-  <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="assets/css/docs.css" rel="stylesheet">
-  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/color/default.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../assets/css/flexslider.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+  <link href="../assets/css/prettyPhoto.css" rel="stylesheet">
+  <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/color/default.css" rel="stylesheet">
+  <link href="../assets/js/node_modules/intro.js/introjs.css" rel="stylesheet">
+
 
   <!-- fav and touch icons -->
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
   <!-- =======================================================
     Theme Name: Serenity
@@ -39,7 +43,7 @@
       <div class="navbar-inner">
         <div class="container">
           <!-- logo -->
-          <a class="brand logo" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+          <a class="brand logo" href="index.html"><img src="../assets/img/logo.png" alt=""></a>
           <!-- end logo -->
           <!-- top menu -->
           <div class="navigation">
@@ -82,9 +86,6 @@
           <div class="span12">
             <div class="centered">
               <h3>Productos & Servicios</h3>
-              <p>
-                Ponemos a sus disposicion nuestro sistema administrativo ALPWINSQL, equipos computacionales y asistencia tecnica de equipos
-              </p>
             </div>
           </div>
         </div>
@@ -94,40 +95,61 @@
   <section id="maincontent">
     <div class="container">
       <div class="row">
-        <ul class="portfolio-area da-thumbs">
-          <li class="portfolio-item2" data-id="id-0" data-type="web">
-            <div class="span4">
-              <div class="thumbnail">
-                <div class="image-wrapp">
-                  <img src="https://i.ibb.co/HzqVMkQ/logoRe.jpg" alt="Portfolio name" title="" />
-                  <article class="da-animate da-slideFromRight" style="display: block;">
-                    <h4>ALPWINSQL</h4>
-                    <a href="detalle1.html"><i class="icon-rounded icon-48 icon-link"></i></a>
-                  </article>
+        <div class="span12">
+          <article>
+            <div class="heading">
+              <h4>ALPWINSQL</h4>
+            </div>
+            <div class="clearfix">
+            </div>
+            <div class="row">
+              <div id="imagenesProd" class="span8">
+                <!-- start flexslider -->
+                <div  class="flexslider">
+                  <ul class="slides" v-for="img of imagProd">
+                    <li>
+                      <img class="slider_img" v-bind:src="imagProd" alt="" />
+                    </li>
+                  </ul>
+                </div>
+                <!-- end flexslider -->
+                <p>
+                 {{descr}}
+                </p>
+              </div>
+              <div class="span4">
+                <div class="project-widget">
+                  <ul class="project-detail">
+                    <li><label>Producto :</label> ALPWINSQL</li>
+                    <li><label>Categoria :</label> Software</li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </li>
-          <li class="portfolio-item2" data-id="id-0" data-type="web">
-            <div class="span4">
-              <div class="thumbnail">
-                <div class="image-wrapp">
-                  <img src="assets/img/dummies/work8.jpg" alt="Portfolio name" title="" />
-                  <article class="da-animate da-slideFromRight" style="display: block;">
-                    <h4>Equipo Computacional</h4>
-                    <a href="detalle2.html"><i class="icon-rounded icon-48 icon-link"></i></a>
-                  </article>
-                </div>
+          </article>
+          <!-- end article full post -->
+        </div>
+      </div>
+      <div class="row" id="fila">
+        <div class="span4"  v-for="detail of det">
+          <div class="well">
+            <div class="centered">
+              <i class="icon-circled icon-64 icon-suitcase active"></i>
+              <h4>{{detail.titulo}}</h4>
+              <div class="dotted_line">
               </div>
+              <ul>
+                <li v-for="p of detail.desc">{{p}}</li>
+              </ul>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>  
       </div>
     </div>
   </section>
   <!-- Footer
  ================================================== -->
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
       <div class="row">
         <div class="span4">
@@ -154,7 +176,7 @@
           <div class="widget">
             <!-- logo -->
             <a class="brand logo" href="index.html">
-              <img src="assets/img/logo-dark.png" alt="" />
+              <img src="../assets/img/logo-dark.png" alt="" />
             </a>
             <!-- end logo -->
             <address>
@@ -177,12 +199,7 @@
           </div>
           <div class="span6">
             <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Serenity
-              -->
+              
               Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
           </div>
@@ -192,22 +209,26 @@
   </footer>
 
   <!-- JavaScript Library Files -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.easing.js"></script>
-  <script src="assets/js/google-code-prettify/prettify.js"></script>
-  <script src="assets/js/modernizr.js"></script>
-  <script src="assets/js/bootstrap.js"></script>
-  <script src="assets/js/jquery.elastislide.js"></script>
-  <script src="assets/js/sequence/sequence.jquery-min.js"></script>
-  <script src="assets/js/sequence/setting.js"></script>
-  <script src="assets/js/jquery.prettyPhoto.js"></script>
-  <script src="assets/js/application.js"></script>
-  <script src="assets/js/jquery.flexslider.js"></script>
-  <script src="assets/js/hover/jquery-hover-effect.js"></script>
-  <script src="assets/js/hover/setting.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.easing.js"></script>
+  <script src="../assets/js/google-code-prettify/prettify.js"></script>
+  <script src="../assets/js/modernizr.js"></script>
+  <script src="../assets/js/bootstrap.js"></script>
+  <script src="../assets/js/jquery.elastislide.js"></script>
+  <script src="../assets/js/sequence/sequence.jquery-min.js"></script>
+  <script src="../assets/js/sequence/setting.js"></script>
+  <script src="../assets/js/jquery.prettyPhoto.js"></script>
+  <script src="../assets/js/application.js"></script>
+  <script src="../assets/js/jquery.flexslider.js"></script>
+  <script src="../assets/js/hover/jquery-hover-effect.js"></script>
+  <script src="../assets/js/hover/setting.js"></script>
+  <script src="../vue/dinamicoDe1.js"></script>
+
 
   <!-- Template Custom JavaScript File -->
-  <script src="assets/js/custom.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/node_modules/intro.js/intro.js"></script>
 
 
 </body>
