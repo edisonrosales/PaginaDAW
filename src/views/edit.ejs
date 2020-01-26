@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ADMINISTRATIVO PRODUCTO</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark mb-4">
+			<a href="/" class="navbar-brand">ADMINISTRATIVO PRODUCTO</a>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<form action="/update/<%=task._id%>" method="POST">
+								<div class="form-group">
+									<input type="text" name="marca" placeholder="Marca" class="form-control" value="<%=task.marca%>">
+								</div>
+								<div class="form-group">
+									<input type="text" name="descripcion" placeholder="Descripcion" class="form-control" value="<%=task.descripcion%>">
+								</div>
+								<div class="form-group">
+									<input type="text" name="stock" placeholder="Stock" class="form-control" value="<%=task.stock%>">
+								</div>
+								<div class="form-group">
+									<input type="text" name="precio" placeholder="Precio Unitario" class="form-control" value="<%=task.precio%>">
+								</div>
+								<button type="submit" class="btn btn-primary btn-block">EDITAR </button>
+							</form>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ADMINISTRATIVO PRODUCTO</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark mb-4">
+			<a href="/" class="navbar-brand">ADMINISTRATIVO PRODUCTO</a>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<form action="/add" method="POST">
+								<div class="form-group">
+									<input type="text" name="marca" placeholder="Marca" class="form-control">
+								</div>
+								<div class="form-group">
+									<input type="text" name="descripcion" placeholder="Descripcion" class="form-control">
+								</div>
+								<div class="form-group">
+									<input type="text" name="stock" placeholder="Stock" class="form-control">
+								</div><div class="form-group">
+									<input type="text" name="precio" placeholder="Precio Unitario" class="form-control">
+								</div>
+								<button type="submit" class="btn btn-primary btn-block">ADD </button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+							<th>N</th>
+							<th>Marca</th>
+							<th>Descripcion</th>
+							<th>Stock</th>
+							<th>Precio Unitario</th>
+							<th>Operacion</th>
+							</tr>
+						</thead>
+						<tbody>
+							<%for(var i=0;i<tasks.length;i++){ %>
+								<tr>
+									<td><%=i+1%></td>
+									<td><%=tasks[i].marca%></td>
+									<td><%=tasks[i].descripcion%></td>
+									<td><%=tasks[i].stock%></td>
+									<td><%=tasks[i].precio%></td>
+									<td>
+										<a href="/delete/<%=tasks[i]._id%>" class="btn btn-danger">Eliminar</a>
+										<a href="/edit/<%=tasks[i]._id%>" class="btn btn-info">Editar</a>
+									</td>
+								</tr>
+							<% }	%>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

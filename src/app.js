@@ -1,7 +1,14 @@
 const path= require('path');
 const morgan=require('morgan');
 const express= require('express');
+const mongoose=require('mongoose');
 const app=express();
+
+//Conectado DB
+mongoose.connect('mongodb://localhost/webStore')
+	.then(db=>console.log('conectada'))
+	.catch(err=>console.log('error'));
+
 
 //Importing routers
 const indexRoutes= require('./routes/index');
@@ -13,6 +20,7 @@ app.set('view engine','ejs');
 
 //Middlewares
 app.use(morgan('dev'));
+app.use(express.urlencoded({extended:false}));
 
 //routes
 app.use('/',indexRoutes);
