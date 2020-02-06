@@ -45,6 +45,27 @@ passport.use('local.signup',new LocalStrategy({
 }));
 
 
+passport.use('local.admin',new LocalStrategy({
+	usernameField:'correo',
+	passwordField:'password',
+	passReqToCallback:true
+},async(req,correo,password,done)=>{
+	const rows=await pool.query('select * from users where correo=?',[correo]);
+	if(rows.length>0){
+		const user=rows[0];
+		const validPassword=await helpers.matchPassword(password,user.password);
+		if(validPassword){
+			done(null,user,req.flash('success','Bienvenido'+user.nombre));
+		}else{
+			done(null,false,req.flash('message','Contraseña incorrecta'));
+		}
+	}else{
+		return done(null,false,req.flash('message','Usuario no existe'));
+	}
+}));
+
+
+
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });

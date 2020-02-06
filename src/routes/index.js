@@ -10,6 +10,29 @@ router.use(bodyParse.json());
 router.use(bodyParse.urlencoded({extended:true}));
 
 
+router.post('/buscar',async(req,res)=>{
+	const{id}=req.body;
+	const fecha={
+		id:id
+	};
+	const info= await pool.query('select * from compraProducto where id_cliente=?',[id]);
+	const user= await pool.query('select * from users where id=?',[id]);
+	console.log(info);
+	console.log(user);
+
+
+	res.render('reporte2.ejs',{info});
+});
+
+
+router.get('/reporte',(req,res)=>{
+	res.render('reporte.ejs');
+})
+
+/*router.get('/compras',isLoggedIn,async(req,res)=>{
+	const info=await pool.query('select * from compraProducto where id_cliente=?',[req.user.id]);
+	res.render('login/compras',{info});
+});*/
 //se busca renderizar una vista en este caso es la de views => index.ejs
 router.get('/admin',async(req,res)=>{
 	const tasks= await Task.find();

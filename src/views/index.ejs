@@ -9,6 +9,20 @@
 		<nav class="navbar navbar-dark bg-dark mb-4">
 			<a href="/admin" class="navbar-brand">ADMINISTRATIVO PRODUCTO</a>
 		</nav>
+		  <section id="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <ul class="breadcrumb notop ">
+          	<li><a href="/logout" class="nav-link mr-5">Cerrar sesion</a></li>
+          </ul>
+          <ul class="breadcrumb notop ">
+    	    <li><a href="/reporte" class="nav-link mr-5">Reporte</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -23,8 +37,12 @@
 								</div>
 								<div class="form-group">
 									<input type="text" name="stock" placeholder="Stock" class="form-control">
-								</div><div class="form-group">
+								</div>
+								<div class="form-group">
 									<input type="text" name="precio" placeholder="Precio Unitario" class="form-control">
+								</div>
+								<div class="form-group">
+									<input type="text" name="imagen" placeholder="Imagen" class="form-control">
 								</div>
 								<button type="submit" class="btn btn-primary btn-block">ADD </button>
 							</form>
@@ -41,6 +59,7 @@
 							<th>Descripcion</th>
 							<th>Stock</th>
 							<th>Precio Unitario</th>
+							<th>Imagen</th>
 							<th>Operacion</th>
 							</tr>
 						</thead>
@@ -52,6 +71,7 @@
 									<td><%=tasks[i].descripcion%></td>
 									<td><%=tasks[i].stock%></td>
 									<td><%=tasks[i].precio%></td>
+									<td><%=tasks[i].imagen%>
 									<td>
 										<a href="/delete/<%=tasks[i]._id%>" class="btn btn-danger">Eliminar</a>
 										<a href="/edit/<%=tasks[i]._id%>" class="btn btn-info">Editar</a>

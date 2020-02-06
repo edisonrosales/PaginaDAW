@@ -5,7 +5,8 @@ const TaskSchema=new Schema({
 	marca:String,
 	descripcion:String,
 	stock:Number,
-	precio:Number
+	precio:Number,
+	imagen:String
 });
 
 module.exports= mongoose.model('tasks',TaskSchema);

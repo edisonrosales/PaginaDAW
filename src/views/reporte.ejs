@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ADMINISTRATIVO PRODUCTO</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark mb-4">
+			<a href="/admin" class="navbar-brand">ADMINISTRATIVO PRODUCTO</a>
+		</nav>
+		<section id="breadcrumb">
+    		<div class="container">
+      			<div class="row">
+        			<div class="span12">
+          				<ul class="breadcrumb notop">
+          					<li><a href="/logout" class="nav-link">Cerrar sesion</a></li>
+          				</ul>
+        			</div>
+      			</div>
+   	 		</div>
+  		</section>
+       	<form action="/buscar" method="POST">
+			<div class="form-group">
+				<input type="text" name="id" placeholder="ID del cliente" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary btn-block">CONSULTAR</button>
+		</form>
+	</body>
+</html>

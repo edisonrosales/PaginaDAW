@@ -16,7 +16,7 @@ router.post('/registro',isNotLoggedIn,passport.authenticate('local.signup',{
 }));
 
 router.get('/login',isNotLoggedIn,(req,res)=>{
-	res.render('login');
+	res.render('login/login');
 });
 
 router.post('/login',isNotLoggedIn,(req,res,next)=>{
@@ -29,7 +29,20 @@ router.post('/login',isNotLoggedIn,(req,res,next)=>{
 
 router.get('/logout',isLoggedIn,(req,res)=>{
 	req.logOut();
-	res.redirect('/login');
+	res.redirect('/loginA');
+});
+
+
+router.get('/loginAdmin',isNotLoggedIn,(req,res)=>{
+	res.render('login/loginAdmin');
+});
+
+router.post('/loginAdmin',isNotLoggedIn,(req,res,next)=>{
+	passport.authenticate('local.admin',{
+		successRedirect:'/admin',
+		failureRedirect:'/loginAdmin',
+		failureFlash:true		
+	})(req,res,next);
 });
 
 

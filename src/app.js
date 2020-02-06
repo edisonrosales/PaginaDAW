@@ -28,6 +28,7 @@ const indexRoutes= require('./routes/index');
 app.set('port',process.env.PORT|| 8080);
 app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs');
+app.use(express.static(__dirname+'/public'));
 
 
 //Middlewares
@@ -56,14 +57,10 @@ app.use((req, res, next) => {
 app.use('/',indexRoutes);
 app.use(require('./routes/authentication'));
 app.use(require('./routes/cliente'));
+app.use(require('./routes/pagina'));
+app.use(require('./email.js'));
 
-/*app.use(require('./routes/authentication.js'));
-app.use('/links',require('./routes/links.js'));
-*/
 
-//Public
-/*app.use(express.static(path.join(__dirname,'public')));
-*/
 //Starting the server
 app.listen(app.get('port'), () => {
   console.log(`Server listening on port ${app.get('port')}...`);

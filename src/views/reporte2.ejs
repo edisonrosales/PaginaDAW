@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ADMINISTRATIVO PRODUCTO</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark mb-4">
+			<a href="/admin" class="navbar-brand">ADMINISTRATIVO PRODUCTO</a>
+		</nav>
+		<section id="breadcrumb">
+    		<div class="container">
+      			<div class="row">
+        			<div class="span12">
+          				<ul class="breadcrumb notop">
+          					<li><a href="/logout" class="nav-link">Cerrar sesion</a></li>
+          				</ul>
+        			</div>
+      			</div>
+   	 		</div>
+  		</section>
+
+  		<div class="container">
+			<div class="container span9">
+				<h4>Informacion del cliente <%=info.id_cliente%></h4>
+			    <% info.forEach(function(info){%>
+					<section class="boxed p-5">
+						<h4>Codigo de la compra: <%=info.id%></h4>
+						<h4>Produco: <%=info.producto%></h4>
+						<h4>Marca: <%=info.marca%></h4>
+						<h4>Fecha: <%=info.fecha%></h4>
+						<h4>Total: $<%=info.total%></h4>
+					</section>
+            	<%});%>
+			</div>
+  		</div>
+	</body>
+</html>

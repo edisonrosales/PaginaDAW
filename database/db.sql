@@ -49,3 +49,15 @@ create table admin(
 );
 
 alter table admin add primary key (id_admin);
+
+create table compraProducto(
+	id int(11) not null,
+	id_cliente varchar(10),
+	id_producto varchar(100),
+	marca varchar(20),
+	descripcion varchar(30),
+	total int(10)
+);
+
+alter table compraProducto add primary key(id);
+alter table compraProducto modify id int(11) not null AUTO_INCREMENT;
